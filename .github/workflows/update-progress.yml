@@ -5,9 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight UTC
 
 jobs:
-  update-readme:
+  update-progress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -21,6 +23,9 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt || true  # No dependencies for now
 
+      - name: Ensure Python Script is Executable
+        run: chmod +x update_progress.py
+
       - name: Run Progress Update Script
         run: python update_progress.py
 
@@ -28,6 +33,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "🤖 Auto-update progress tracker" || echo "No changes to commit"
+          git add progress.md
+          git diff --quiet && echo "No changes to commit" || git commit -m "🤖 Auto-update progress tracker"
           git push
