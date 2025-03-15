@@ -69,8 +69,6 @@ public class Solution {
 
 ![Accepted Submission](Screenshots/1.1.png)
 
-> *Attach or link a screenshot of the accepted submission for this approach on LeetCode.*
-
 ---
 
 ## 🔹 Approach 2: Iteration (One Pass)
@@ -104,8 +102,6 @@ public class Solution {
 
 ![Accepted Submission](Screenshots/1.2.png)
 
-> *Attach or link a screenshot of the accepted submission for this approach on LeetCode.* \*
 >
 > ---
->
-> &#x20;
+
