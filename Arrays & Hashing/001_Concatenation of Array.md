@@ -67,7 +67,7 @@ public class Solution {
 
 ### 📸 LeetCode Screenshot
 
-![Accepted Submission](Screenshots/approach1.png)
+![Accepted Submission](Screenshots/1.1.png)
 
 > *Attach or link a screenshot of the accepted submission for this approach on LeetCode.*
 
@@ -102,7 +102,7 @@ public class Solution {
 
 ### 📸 LeetCode Screenshot
 
-![Accepted Submission](Screenshots/approach1.png)
+![Accepted Submission](Screenshots/1.2.png)
 
 > *Attach or link a screenshot of the accepted submission for this approach on LeetCode.* \*
 >
