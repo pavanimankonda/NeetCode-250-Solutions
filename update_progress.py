@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 
 PROGRESS_FILE = "progress.md"
+PROBLEM_DIRS = ["Arrays & Hashing", "Two Pointers"]  # Add more directories if needed
 
 def get_solved_problems():
     problems = []
