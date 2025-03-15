@@ -5,13 +5,21 @@ from datetime import datetime
 PROGRESS_FILE = "progress.md"
 
 def get_solved_problems():
-    """
-    Scans the repository for solved problems and extracts their names.
-    Assumes filenames are formatted as '###_Problem_Name.md'.
-    """
-    files = sorted([f for f in os.listdir() if re.match(r'\d{3}_.+\.md', f)])
-    problems = [re.sub(r'\d{3}_', '', f).replace('.md', '').replace('_', ' ') for f in files]
+    problems = []
+    
+    for directory in PROBLEM_DIRS:
+        if not os.path.exists(directory):
+            print(f"⚠ Directory not found: {directory}")  # Debugging line
+            continue 
+        
+        for filename in sorted(os.listdir(directory)):
+            if re.match(r'^\d{3}_.+\.md$', filename): 
+                problem_name = re.sub(r'^\d{3}_', '', filename).replace('.md', '').replace('_', ' ')
+                problems.append(problem_name)
+    
+    print(f"🔍 Detected Problems: {problems}")  # Debugging line
     return problems
+
 
 def update_progress(problems):
     """
