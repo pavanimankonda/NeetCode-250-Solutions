@@ -2,14 +2,21 @@ import os
 import re
 from datetime import datetime
 
-README_FILE = "README.md"
+PROGRESS_FILE = "progress.md"
 
 def get_solved_problems():
+    """
+    Scans the repository for solved problems and extracts their names.
+    Assumes filenames are formatted as '###_Problem_Name.md'.
+    """
     files = sorted([f for f in os.listdir() if re.match(r'\d{3}_.+\.md', f)])
     problems = [re.sub(r'\d{3}_', '', f).replace('.md', '').replace('_', ' ') for f in files]
     return problems
 
-def update_readme(problems):
+def update_progress(problems):
+    """
+    Updates the progress tracker in 'progress.md' with solved problems.
+    """
     num_days = (len(problems) + 1) // 2  # 2 problems per day
     table = "| Day | Problem 1 | Problem 2 |\n|-----|----------|----------|\n"
     
@@ -21,23 +28,14 @@ def update_readme(problems):
     last_updated = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
     timestamp_line = f"🕒 **Last updated:** {last_updated}"
 
-    with open(README_FILE, "r", encoding="utf-8") as file:
-        content = file.read()
+    # Create or update progress.md
+    with open(PROGRESS_FILE, "w", encoding="utf-8") as file:
+        file.write("# 📊 Progress Tracker\n\n")
+        file.write(table)
+        file.write(f"\n{timestamp_line}\n")
 
-    # Update the progress tracker table
-    updated_content = re.sub(r"\| Day \| Problem 1 \| Problem 2 \|\n\|-----\|----------\|----------\|\n(.*?\n)*", table, content)
-
-    # Update the last updated timestamp
-    if "🕒 **Last updated:**" in updated_content:
-        updated_content = re.sub(r"🕒 \*\*Last updated:\*\* .*", timestamp_line, updated_content)
-    else:
-        updated_content += f"\n\n{timestamp_line}\n"
-
-    with open(README_FILE, "w", encoding="utf-8") as file:
-        file.write(updated_content)
-
-    print("✅ Progress tracker updated!")
+    print("✅ Progress tracker updated in progress.md!")
 
 if __name__ == "__main__":
     problems = get_solved_problems()
-    update_readme(problems)
+    update_progress(problems)
