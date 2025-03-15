@@ -1,72 +1,82 @@
-# Problem Name
+# Concatenation of Array
 
 ## 📝 Problem Statement
 
 ### 🔗 Problem Link
-> *[LeetCode Problem](<Insert_Link_Here>)*
 
-> *Provide a concise and clear problem statement. Include constraints if necessary.*
+> *[LeetCode Problem](PROBLEM_LINK_HERE)*
 
-## 🔹 Approach 1: Brute Force
+> PROBLEM\_DESCRIPTION\_HERE
+>
+> **Example 1:**
+>
+> **Input:** INPUT\_HERE\
+> **Output:** OUTPUT\_HERE\
+> **Explanation:** EXPLANATION\_HERE
+>
+> **Example 2:**
+>
+> **Input:** INPUT\_HERE\
+> **Output:** OUTPUT\_HERE\
+> **Explanation:** EXPLANATION\_HERE
+>
+> **Constraints:**
+>
+> - CONSTRAINT\_1\_HERE
+> - CONSTRAINT\_2\_HERE
+> - CONSTRAINT\_3\_HERE
+
+---
+
+## 🛩️ Approach 1: APPROACH\_NAME\_HERE
 
 ### 🔍 Idea
 
-- *Explain the brute-force approach and how it works.*
+- EXPLANATION\_OF\_APPROACH\_HERE
 
 ### 🚀 Implementation
 
 ```java
-// Java solution for brute force approach
+public class Solution {
+    public RETURN_TYPE FUNCTION_NAME(PARAMETERS) {
+        // IMPLEMENTATION_HERE
+    }
+}
 ```
 
 ### ⏳ Complexity Analysis
 
-- **Time Complexity:** `O(?)`
-- **Space Complexity:** `O(?)`
+- **Time Complexity:** `TIME_COMPLEXITY_HERE`
+- **Space Complexity:** `SPACE_COMPLEXITY_HERE`
 
 ### 📸 LeetCode Screenshot
-> *Attach or link a screenshot of the accepted submission for this approach on LeetCode.*
 
-- **Time Complexity:** `O(?)`
-- **Space Complexity:** `O(?)`
+
 
 ---
 
-## 🔹 Approach 2: Optimized Solution
+## 🛩️ Approach 2: APPROACH\_NAME\_HERE
 
 ### 🔍 Idea
 
-- *Describe the optimized approach and why it’s better.*
+- EXPLANATION\_OF\_APPROACH\_HERE
 
 ### 🚀 Implementation
 
 ```java
-// Java solution for optimized approach
+public class Solution {
+    public RETURN_TYPE FUNCTION_NAME(PARAMETERS) {
+        // IMPLEMENTATION_HERE
+    }
+}
 ```
 
 ### ⏳ Complexity Analysis
 
-- **Time Complexity:** `O(?)`
-- **Space Complexity:** `O(?)`
+- **Time Complexity:** `TIME_COMPLEXITY_HERE`
+- **Space Complexity:** `SPACE_COMPLEXITY_HERE`
 
 ### 📸 LeetCode Screenshot
-> *Attach or link a screenshot of the accepted submission for this approach on LeetCode.*
 
-- **Time Complexity:** `O(?)`
-- **Space Complexity:** `O(?)`
 
----
 
-## 📸 LeetCode Screenshot
-
-> *Attach or link a screenshot of the accepted submission on LeetCode.*
-
----
-
-## 💡 Key Takeaways
-
-- *Summarize important concepts and optimizations learned from this problem.*
-
----
-
-**Happy Coding! 🚀**
