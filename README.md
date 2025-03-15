@@ -1,5 +1,3 @@
-![Progress Tracker](https://github.com/pavanimankonda/NeetCode-250-Solutions/actions/workflows/update-progress.yml/badge.svg)
-
 # NeetCode 250 DSA Solutions 🚀
 
 Welcome to my **NeetCode 250 DSA Solutions** repository! Here, I will be solving **two problems daily** from the **NeetCode 250 DSA Sheet** and documenting my solutions, thought process, and optimizations.
