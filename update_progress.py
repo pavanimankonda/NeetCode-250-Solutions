@@ -2,25 +2,29 @@ import os
 import re
 from datetime import datetime
 
+# Constants
 PROGRESS_FILE = "progress.md"
-PROBLEM_DIRS = ["Arrays & Hashing", "Two Pointers"]  # Add more directories if needed
+PROBLEM_DIRS = ["Arrays & Hashing", "Two Pointers"]  # Add more directories as needed
 
 def get_solved_problems():
+    """
+    Scans the repository for solved problems and extracts their names.
+    Assumes filenames are formatted as '###_Problem_Name.md'.
+    """
     problems = []
     
     for directory in PROBLEM_DIRS:
         if not os.path.exists(directory):
-            print(f"⚠ Directory not found: {directory}")  # Debugging line
+            print(f"⚠ Warning: Directory not found - {directory}")
             continue 
         
         for filename in sorted(os.listdir(directory)):
             if re.match(r'^\d{3}_.+\.md$', filename): 
                 problem_name = re.sub(r'^\d{3}_', '', filename).replace('.md', '').replace('_', ' ')
                 problems.append(problem_name)
-    
-    print(f"🔍 Detected Problems: {problems}")  # Debugging line
-    return problems
 
+    print(f"✅ Detected {len(problems)} solved problems.")
+    return problems
 
 def update_progress(problems):
     """
@@ -47,4 +51,7 @@ def update_progress(problems):
 
 if __name__ == "__main__":
     problems = get_solved_problems()
-    update_progress(problems)
+    if problems:
+        update_progress(problems)
+    else:
+        print("⚠ No solved problems found. Make sure the problem files exist.")
