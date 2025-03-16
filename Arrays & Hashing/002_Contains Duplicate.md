@@ -97,4 +97,4 @@ public class Solution {
 - **Space Complexity:** `O(n)`
 
 ### 📸 LeetCode Screenshot
-![Accepted Submission](Screenshots/2.1.png)
+![Accepted Submission](Screenshots/2.2.png)
