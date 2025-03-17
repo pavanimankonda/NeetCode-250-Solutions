@@ -46,13 +46,14 @@
 ### 🚀 Implementation
 
 ```java
-public class Solution {
+class Solution {
     public int[] getConcatenation(int[] nums) {
-        int[] ans = new int[2 * nums.length];
-        int idx = 0;
-        for (int i = 0; i < 2; i++) {
-            for (int num : nums) {
-                ans[idx++] = num;
+        int n = nums.length;
+        int ans[] = new int[2 * n];
+        int k = 0;
+        for (int i = 1; i <= 2; i++) {
+            for (int j = 0; j < n; j++) {
+                ans[k++] = nums[j];
             }
         }
         return ans;
@@ -81,12 +82,14 @@ public class Solution {
 ### 🚀 Implementation
 
 ```java
-public class Solution {
+class Solution {
     public int[] getConcatenation(int[] nums) {
         int n = nums.length;
-        int[] ans = new int[2 * n];
-        for (int i = 0; i < n; i++) {
-            ans[i] = ans[i + n] = nums[i];
+        int ans[] = new int[2 * n];
+        int k = 0;
+        for (int i = 0; i <n; i++) {
+            ans[i] = nums[i];
+            ans[i+n]=nums[i];
         }
         return ans;
     }
