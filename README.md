@@ -20,11 +20,8 @@ NeetCode-250-Solutions/
 │   ├── 023_Reverse String
 │   ├── 024_Valid Palindrome
 |   .
+|   .
 ├── TEMPLATE.md  # Template for new problems
-├── progress.md  # Automatically updated progress tracker
-├── .github/
-│   ├── workflows/
-│   │   ├── update-progress.yml  # GitHub Action for progress tracking
 ├── README.md
 ```
 Each problem will be documented in a **`.md` file**, containing:  
@@ -42,9 +39,8 @@ Each problem will be documented in a **`.md` file**, containing:
    git clone https://github.com/your-username/NeetCode-250-Solutions.git
    cd NeetCode-250-Solutions
    ```
-2. **Check the `progress.md` file** to see completed problems.  
-3. **Open any `.md` file inside `Problems/`** for explanations and Java solutions.  
-4. **Review the approach**, understand the solution, and try solving it yourself!  
+2. **Open any `.md` file inside `Problems/`** for explanations and Java solutions.  
+3. **Review the approach**, understand the solution, and try solving it yourself!  
 
 ---
 
