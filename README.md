@@ -48,13 +48,6 @@ Each problem will be documented in a **`.md` file**, containing:
 
 ---
 
-## 🔥 Progress Tracking  
-- A **separate file (`progress.md`)** is used to track solved problems.  
-- The progress tracker will be **automatically updated** using a GitHub Action.  
-- **Check `progress.md`** to see the latest solved problems!  
-
----
-
 ## 💡 Learning Approach  
 - **Read and understand the problem statement carefully.**  
 - **Start with a brute-force approach, then optimize.**  
