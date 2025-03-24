@@ -27,41 +27,7 @@
 
 ---
 
-## 🛩️ Approach 1: Built-In Function
-
-### 🔍 Idea
-
-- Convert the array to a list and use `Collections.reverse()`.
-
-### 🚀 Implementation
-
-```java
-public class Solution {
-    public void reverseString(char[] s) {
-        List<Character> list = new ArrayList<>();
-        for (char c : s) {
-            list.add(c);
-        }
-        Collections.reverse(list);
-        
-        for (int i = 0; i < s.length; i++) {
-            s[i] = list.get(i);
-        }
-    }
-}
-```
-
-### ⏳ Complexity Analysis
-
-- **Time Complexity:** `O(n)`
-- **Space Complexity:** `O(1)`
-
-### 📸 LeetCode Screenshot
-![Accepted Submission](Screenshots/1.1.png)
-
----
-
-## 🛩️ Approach 2: Two Pointers
+## 🛩️ Approach 1: Two Pointers
 
 ### 🔍 Idea
 
@@ -93,5 +59,10 @@ class Solution {
 - **Space Complexity:** `O(1)`
 
 ### 📸 LeetCode Screenshot
-![Accepted Submission](Screenshots/1.2.png)
+![Accepted Submission](Screenshots/1.1.png)
+
+---
+
+### ⚠️ Note
+All other approaches require more than `O(1)` space.
 
